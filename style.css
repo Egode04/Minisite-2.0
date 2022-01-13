@@ -1,0 +1,291 @@
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+    --scroll-thumb: #6649b8;
+    --scroll-track: #1e1e24;
+
+}
+
+.light {
+    background: white;
+    color: black;
+    transition: var(--transition-speed);
+
+}
+
+.dark {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    transition: var(--transition-speed);
+
+}
+
+.dark .link-text {
+    color: #585858;
+    transition: var(--transition-speed);
+}
+
+.dark i {
+    color: #585858;
+    transition: var(--transition-speed);
+}
+
+.dark .nav-link:hover {
+    background: white;
+    transition: var(--transition-speed);
+}
+
+.dark .nav-link:hover .link-text {
+    color: var(--bg-primary);
+    transition: var(--transition-speed);
+}
+
+.dark .nav-link:hover i {
+    color: #a889ff;
+    transition: var(--transition-speed);
+
+}
+
+
+#navbar {
+    background: var(--bg-primary);
+
+}
+
+#navbar-light {
+    background: var(--bg-primary);
+
+}
+
+#navbar-dark {
+    background: var(--text-secondary);
+
+}
+
+body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scroll-track);
+
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb);
+
+}
+
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+
+.navbar {
+    position: fixed;
+    background: var(--bg-primary);
+    transition: width 200ms ease;
+
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+}
+
+.nav-item {
+    width: 100%;
+
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition-speed);
+
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+    transition: var(--transition-speed);
+
+}
+
+.nav-link i {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    transition: var(--transition-speed);
+
+}
+
+.nav-link:hover {
+    background: var(--bg-secondary);
+    transition: var(--transition-speed);
+    
+}
+
+.nav-link:hover i {
+    color: #ff7eee;
+    transition: var(--transition-speed);
+
+}
+
+.nav-link:hover .link-text {
+    color: var(--text-secondary);
+    transition: var(--transition-speed);
+
+}
+
+.fa-primary {
+    color: #ff7eee;
+}
+.fa-secondary{
+    color: #df49a6;
+}
+
+
+#logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    width: 100%;
+
+}
+
+#logo i {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+
+}
+
+.navbar:hover #logo i {
+    transform: rotate(-180deg);
+
+}
+
+.jaggedin {
+    margin-left: 1vw;
+}
+
+/*
+Small Screen Only
+*/
+@media only screen and (max-width: 600px) {
+
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+
+    }
+
+    #logo {
+        display: none;
+
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+
+    }
+
+    .nav-link {
+        justify-content: center;
+
+    }
+
+    main {
+        margin: 0;
+
+    }
+
+}
+
+/*
+Big Screen Only
+*/
+@media only screen and (min-width: 600px) {
+    
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+
+    }
+    .navbar:hover {
+        width: 16rem;
+
+    }
+    .navbar:hover .link-text {
+        display: inline;
+
+    }
+    
+}
+
+@media only screen and (max-height: 600px) {
+
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+        top: calc(100vh - 5rem)
+
+    }
+
+    #logo {
+        display: none;
+
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+
+    }
+
+    .nav-link {
+        justify-content: center;
+
+    }
+
+    main {
+        margin: 0;
+
+    }
+
+}
