@@ -3,35 +3,40 @@
     
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="login.css">¨
+        <link rel="stylesheet" href="login.css">
         <script src="login.js"></script>
-        <title>Login</title>
+        <title>Anime Guide - Login</title>
+        <link rel="icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/5bd8be66-d1fe-4705-9454-77b011b2d6d9/d8kowd7-a56728d0-50c1-4fca-a675-9e60b18abc20.png">
     </head>
     
     <body>
         
         <form action="/action_page.php" method="post">
         <div class="imgcontainer">
-            <img src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg" alt="Profile" class="avatar">
+            <img src="https://i.pinimg.com/originals/1e/1e/5e/1e1e5e892ec56c2bec812746eb6816b3.png" alt="Profile" class="avatar">
         </div>
         
         <div class="container">
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
         
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
                 
-            <button type="submit">Login</button>
             <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
+            <br>
+            <button class="button-div" type="submit">Login</button>
         </div>
         
-        <div class="container" style="background-color:#23232e">
+        <div class="container" style="background-color:#141418">
             <button type="button" class="cancelbtn">Cancel</button>
             <span class="psw" id="header">Forgot <a href="#">password?</a></span>
-            <button onclick="backToMain()">Go Back to Main Page</button>
+            <div class="button-div"><a href="index.html">Go Back to Main Page</a></div>
         </div>
         </form>
     </body>

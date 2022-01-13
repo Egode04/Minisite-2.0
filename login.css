@@ -1,4 +1,4 @@
-body {font-family: Arial, Helvetica, sans-serif; color: #ececec;}
+body {font-family: Arial, Helvetica, sans-serif; color: #ececec; background-color: #23232e;}
 form {border: 3px solid #23232e; background-color: #141418;}
 
 input[type=text], input[type=password] {
@@ -8,20 +8,21 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  border-radius: 2%;
 }
 
-button {
+.button-div {
   background-color: #6649b8;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 12rem;
   transition: 200ms;
 }
 
-button:hover {
+.button-div:hover {
   background-color: #433077;
   transition: 200ms;
 }
@@ -31,10 +32,12 @@ button:hover {
   padding: 10px 18px;
   background-color: #6649b8;
   transition: 200ms;
+  color: #eee;
 }
 
 .cancelbtn:hover {
   background-color: #df49a6;
+  border-color: #df49a6;
   transition: 200ms;
 }
 
@@ -63,6 +66,11 @@ span.psw {
 
 a {
   color: rgb(255, 86, 255);
+}
+
+div.button-div a {
+  text-decoration: none;
+  color: #eee;
 }
 
 /* Change styles for span and cancel button on extra small screens */

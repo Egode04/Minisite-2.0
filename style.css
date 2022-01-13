@@ -76,18 +76,26 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 0.25rem;
+    width: 0.5rem;
 
 }
 
-body::-webkit-scrollbar-track {
+body.dark::-webkit-scrollbar-track {
     background: var(--scroll-track);
 
 }
 
-body::-webkit-scrollbar-thumb {
+body.dark::-webkit-scrollbar-thumb {
     background: var(--scroll-thumb);
 
+}
+
+body.light::-webkit-scrollbar-track {
+    background: #ececec;
+}
+
+body.light::-webkit-scrollbar-thumb {
+    background: #ff7eee;
 }
 
 
@@ -202,6 +210,32 @@ main {
     margin-left: 1vw;
 }
 
+img {
+    border-radius: 1%;
+}
+
+body.light img {
+    box-shadow: 0 0 5px var(--bg-secondary);
+    transition: var(--transition-speed);
+}
+
+body.dark img {
+    box-shadow: 0 0 5px var(--text-secondary);
+    transition: var(--transition-speed);
+}
+
+h2 {
+    font-family: 'Luxurious Roman', cursive;
+}
+
+h1 {
+    font-family: 'Luxurious Roman', cursive;
+}
+
+p {
+    font-family: 'Luxurious Roman', cursive;
+}
+
 /*
 Small Screen Only
 */
@@ -289,3 +323,7 @@ Big Screen Only
     }
 
 }
+
+/*
+h2.jaggedin+p.jaggedin+img.jaggedin
+*/
